@@ -7,4 +7,8 @@ alias .....='cd ../../../../../..'
 alias ......='cd ../../../../../../..'
 alias ll='ls -al --color'
 alias g='gvim'
-alias zs='cd /home/centos/Code/script'
+if [ `whoami` == "ubuntu" ]; then
+    alias zs='cd /home/ubuntu/Code/scripts'
+elif [ `whoami` == "centos" ]; then
+    alias zs='cd /home/centos/Code/scripts'
+fi
